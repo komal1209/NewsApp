@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
                                 putExtra("news_title", article.title)
                                 putExtra("news_description", article.description)
                                 putExtra("news_image", article.urlToImage)
-                                putExtra("news_url", article.url) // ✅ Send article URL for ID conversion
+                                putExtra("news_url", article.url)
                             }
                             Log.d("MainActivity ",intent.toString())
                             startActivity(intent)
