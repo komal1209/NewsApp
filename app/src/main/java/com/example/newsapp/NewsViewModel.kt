@@ -31,7 +31,7 @@ class NewsViewModel @Inject constructor(private val repository: NewsRepository) 
     private val _comments = MutableStateFlow(0)
     val comments: StateFlow<Int> = _comments
 
-    private val _errorMessage = MutableStateFlow<String?>(null) // ✅ Error message
+    private val _errorMessage = MutableStateFlow<String?>(null)
     val errorMessage: StateFlow<String?> = _errorMessage
 
     fun fetchLikes(articleId: String) {

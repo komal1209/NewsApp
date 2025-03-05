@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.fetchNews("f57a02b149ab4d34be545eb9e08545b2") // Fetch news on start
+        viewModel.fetchNews("f57a02b149ab4d34be545eb9e08545b2")
 
         setContent {
             NewsAppTheme {
