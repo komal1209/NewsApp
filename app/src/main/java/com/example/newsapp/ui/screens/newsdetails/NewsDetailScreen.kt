@@ -1,6 +1,5 @@
 package com.example.newsapp.ui.screens.newsdetails
 
-import android.graphics.drawable.Icon
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
