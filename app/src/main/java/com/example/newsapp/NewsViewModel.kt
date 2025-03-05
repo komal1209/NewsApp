@@ -18,13 +18,6 @@ class NewsViewModel @Inject constructor(private val repository: NewsRepository) 
     private val _newsList = MutableLiveData<List<NewsArticle>>()
     val newsList: LiveData<List<NewsArticle>> = _newsList
 
-    fun fetchNews(apiKey: String) {
-        viewModelScope.launch {
-            val response = repository.getNews(apiKey)
-            _newsList.postValue(response.articles)
-        }
-    }
-
     private val _likes = MutableStateFlow(0)
     val likes: StateFlow<Int> = _likes
 
@@ -33,6 +26,13 @@ class NewsViewModel @Inject constructor(private val repository: NewsRepository) 
 
     private val _errorMessage = MutableStateFlow<String?>(null)
     val errorMessage: StateFlow<String?> = _errorMessage
+
+    fun fetchNews(apiKey: String) {
+        viewModelScope.launch {
+            val response = repository.getNews(apiKey)
+            _newsList.postValue(response.articles)
+        }
+    }
 
     fun fetchLikes(articleId: String) {
         viewModelScope.launch {
