@@ -32,7 +32,9 @@ class NewsDetailActivity : ComponentActivity() {
 
         setContent {
             NewsAppTheme {
-                NewsDetailScreen(title, description, imageUrl, viewModel)
+                NewsDetailScreen(title, description, imageUrl, viewModel){
+                    finish()
+                }
             }
         }
     }
